@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Qual fila é mais rápida?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Qual fila é mais rápida?</h1>
+    <p class="subtitle">
+        Compare ordem de chegada vs menor número de itens
+    </p>
+
+    <p class="info">
+        Cada item representa 1 segundo de atendimento.
+    </p>
+    <div class="input-area">
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="number" id="itens" placeholder="Itens" min="1">
+        <button class="add-btn" onclick="addCliente()">Adicionar</button>
+    </div>
+
+    <div id="lista"></div>
+
+    <button class="sim-btn" onclick="simular()">Simular</button>
+    <button class="clear-btn" onclick="limpar()">Limpar</button>
+
+    <div class="queues">
+
+        <div class="queue fifo" id="filaFifo">
+            <h3>Ordem de Chegada</h3>
+
+            <div class="checkout">
+                🛒 Caixa
+            </div>
+
+            <div class="queue-list" id="fifo"></div>
+
+            <p id="tempoFifo"></p>
+        </div>
+
+        <div class="queue sjf" id="filaSjf">
+            <h3>Menor Número de Itens</h3>
+
+            <div class="checkout">
+                🛒 Caixa
+            </div>
+
+            <div class="queue-list" id="sjf"></div>
+
+            <p id="tempoSjf"></p>
+        </div>
+    </div>
+
+    <div class="result" id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
